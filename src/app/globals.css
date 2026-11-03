@@ -1,0 +1,110 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* Studio-floor palette: cool paper + tally-light amber + control-room indigo */
+@plugin "daisyui/theme" {
+  name: "studiolight";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+  --color-base-100: oklch(98.5% 0.004 250);
+  --color-base-200: oklch(95.5% 0.01 250);
+  --color-base-300: oklch(90% 0.014 250);
+  --color-base-content: oklch(24% 0.04 265);
+  --color-primary: oklch(52% 0.2 268);
+  --color-primary-content: oklch(98% 0.01 268);
+  --color-secondary: oklch(24% 0.05 268);
+  --color-secondary-content: oklch(96% 0.01 250);
+  --color-accent: oklch(80% 0.17 78);
+  --color-accent-content: oklch(25% 0.06 70);
+  --color-neutral: oklch(27% 0.05 268);
+  --color-neutral-content: oklch(96% 0.01 250);
+  --color-info: oklch(68% 0.14 235);
+  --color-info-content: oklch(18% 0.04 235);
+  --color-success: oklch(70% 0.16 155);
+  --color-success-content: oklch(20% 0.05 155);
+  --color-warning: oklch(82% 0.16 82);
+  --color-warning-content: oklch(25% 0.06 80);
+  --color-error: oklch(62% 0.22 25);
+  --color-error-content: oklch(98% 0.01 25);
+  --radius-selector: 0.75rem;
+  --radius-field: 0.5rem;
+  --radius-box: 0.875rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
+
+@plugin "daisyui/theme" {
+  name: "studiodark";
+  default: false;
+  prefersdark: true;
+  color-scheme: dark;
+  --color-base-100: oklch(20% 0.035 268);
+  --color-base-200: oklch(17% 0.035 268);
+  --color-base-300: oklch(13.5% 0.03 268);
+  --color-base-content: oklch(93% 0.012 250);
+  --color-primary: oklch(70% 0.17 270);
+  --color-primary-content: oklch(16% 0.04 270);
+  --color-secondary: oklch(32% 0.06 268);
+  --color-secondary-content: oklch(94% 0.01 250);
+  --color-accent: oklch(82% 0.17 80);
+  --color-accent-content: oklch(24% 0.06 70);
+  --color-neutral: oklch(30% 0.05 268);
+  --color-neutral-content: oklch(94% 0.01 250);
+  --color-info: oklch(72% 0.13 235);
+  --color-info-content: oklch(18% 0.04 235);
+  --color-success: oklch(74% 0.16 155);
+  --color-success-content: oklch(18% 0.05 155);
+  --color-warning: oklch(84% 0.15 82);
+  --color-warning-content: oklch(24% 0.06 80);
+  --color-error: oklch(68% 0.2 25);
+  --color-error-content: oklch(16% 0.05 25);
+  --radius-selector: 0.75rem;
+  --radius-field: 0.5rem;
+  --radius-box: 0.875rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
+
+:root {
+  --font-display: var(--font-bricolage), system-ui, sans-serif;
+  --font-body: var(--font-figtree), system-ui, sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-base-100);
+  color: var(--color-base-content);
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.page-wrap {
+  max-width: 80rem;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+@media (min-width: 768px) {
+  .page-wrap { padding-inline: 1.5rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
