@@ -13,7 +13,6 @@ export const metadata: Metadata = {
   description: "Discover and book photo studios, sound stages, podcast rooms and music suites from verified hosts.",
 };
 
-// Apply the saved theme before first paint to avoid a flash
 const themeScript = `try{var t=localStorage.getItem("theme");if(!t){t=window.matchMedia("(prefers-color-scheme: dark)").matches?"studiodark":"studiolight"}document.documentElement.setAttribute("data-theme",t)}catch(e){}`;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

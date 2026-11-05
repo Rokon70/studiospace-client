@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { FiMoon, FiSun } from "react-icons/fi";
 
-// Challenge 3: light / dark theme toggle (persisted in localStorage)
+// Challenge 3: light / dark theme
 export default function ThemeToggle() {
   const [theme, setTheme] = useState("studiolight");
 

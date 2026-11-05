@@ -1,4 +1,4 @@
-// All calls go through Next.js rewrites: /api/server/* -> Express /api/*
+// All calls go through Next.js 
 export async function api<T>(path: string, options: RequestInit = {}): Promise<T> {
   const res = await fetch(`/api/server${path}`, {
     credentials: "include",

@@ -24,7 +24,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const userId = user?.id ?? null;
   const [tokenFor, setTokenFor] = useState<string | null>(null);
 
-  // Whenever a session exists, make sure the HTTPOnly JWT cookie exists too.
   useEffect(() => {
     if (!userId) {
       setTokenFor(null);
@@ -41,8 +40,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     };
   }, [userId]);
 
-  // "loading" stays true until the session AND the JWT cookie are ready.
-  // This is what stops private routes from redirecting to /login on reload.
+ 
   const loading = isPending || (!!userId && tokenFor !== userId);
 
   const logout = useCallback(async () => {
