@@ -1,7 +1,9 @@
 # StudioSpace
 
 **Live site:** https://studiospace-client-fawn.vercel.app
+
 **Server repo:** https://github.com/Rokon70/studiospace-server
+
 **Server API:** https://studiospace-server-hwqw.onrender.com
 
 StudioSpace is a peer-to-peer marketplace where creators discover, filter and book photo studios, sound stages, podcast lounges, music suites and art workshops by the hour, and where hosts list and manage their own spaces.
